@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Encyclopedia</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin: 20px;
+      color: #333;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 300px;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.5em;
+      margin: 0.5em 0;
+    }
+    .card-subtitle {
+      color: #777;
+      margin: 0.5em 0;
+    }
+    .card-text {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 1em;
+    }
+    .card-rating {
+      font-size: 1.2em;
+      color: #ff9800;
+      margin: 0.5em 0;
+    }
+    .card-price {
+      font-size: 1.2em;
+      color: #28a745;
+      margin: 0.5em 0;
+    }
+    .view-more-btn {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .view-more-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Car Encyclopedia</h1>
+  <div class="container">
+    <!-- Car Card 1 -->
+    <div class="card">
+      <img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1440" alt="Car 1">
+      <div class="card-body">
+        <h5 class="card-title">Car 1</h5>
+        <h6 class="card-subtitle">Model 1</h6>
+        <p class="card-text">A brief description of Car 1.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★★☆</p>
+        <p class="card-price">Price in India: ₹10,00,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Repeat for each car -->
+    <!-- Car Card 2 -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiwOlLqfnhrWq1_R93UqBhw4Sj0Xh0PnaF45mnXhIP-OJU3BND9Q2dA5Xh9XX7EG9RiE&usqp=CAU" alt="Car 2">
+      <div class="card-body">
+        <h5 class="card-title">Car 2</h5>
+        <h6 class="card-subtitle">Model 2</h6>
+        <p class="card-text">A brief description of Car 2.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★☆☆</p>
+        <p class="card-price">Price in India: ₹8,50,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 3 -->
+    <div class="card">
+      <img src="https://d2m3nfprmhqjvd.cloudfront.net/blog/20221004191046/Hyundai-Venue-2022-1160x653.jpg" alt="Car 3">
+      <div class="card-body">
+        <h5 class="card-title">Car 3</h5>
+        <h6 class="card-subtitle">Model 3</h6>
+        <p class="card-text">A brief description of Car 3.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★★★</p>
+        <p class="card-price">Price in India: ₹12,00,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 4 -->
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Car 4">
+      <div class="card-body">
+        <h5 class="card-title">Car 4</h5>
+        <h6 class="card-subtitle">Model 4</h6>
+        <p class="card-text">A brief description of Car 4.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★★☆</p>
+        <p class="card-price">Price in India: ₹9,00,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 5 -->
+    <div class="card">
+      <img src="https://imgd-ct.aeplcdn.com/664x374/n/cw/ec/107917/creta-right-front-three-quarter.jpeg?isig=0&q=80" alt="Car 5">
+      <div class="card-body">
+        <h5 class="card-title">Car 5</h5>
+        <h6 class="card-subtitle">Model 5</h6>
+        <p class="card-text">A brief description of Car 5.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★☆☆</p>
+        <p class="card-price">Price in India: ₹7,50,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 6 -->
+    <div class="card">
+      <img src="https://imgd.aeplcdn.com/600x337/n/cw/ec/128413/scorpio-exterior-right-front-three-quarter-47.jpeg?isig=0&q=80" alt="Car 6">
+      <div class="card-body">
+        <h5 class="card-title">Car 6</h5>
+        <h6 class="card-subtitle">Model 6</h6>
+        <p class="card-text">A brief description of Car 6.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★★★</p>
+        <p class="card-price">Price in India: ₹11,00,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 7 -->
+    <div class="card">
+      <img src="https://media.zigcdn.com/media/model/2021/Jan/fortuner-3_360x240.jpg" alt="Car 7">
+      <div class="card-body">
+        <h5 class="card-title">Car 7</h5>
+        <h6 class="card-subtitle">Model 7</h6>
+        <p class="card-text">A brief description of Car 7.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★★☆</p>
+        <p class="card-price">Price in India: ₹9,50,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 8 -->
+    <div class="card">
+      <img src="https://example.com/car8.jpg" alt="Car 8">
+      <div class="card-body">
+        <h5 class="card-title">Car 8</h5>
+        <h6 class="card-subtitle">Model 8</h6>
+        <p class="card-text">A brief description of Car 8.</p>
+        <p class="card-rating">Global NCAP Rating: ★★★☆☆</p>
+        <p class="card-price">Price in India: ₹8,00,000</p>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <!-- Car Card 9 -->
+    <div class="card">
+      <img src="https://example.com/car9.jpg" alt="Car 9">
+      <div class="card-body">
+        <h5 class="card-title">Car 9</h5>
+        <h6 class="card-subtitle">Model 9</h6>
+        <p class="card-text">A brief description of Car 9.</p>
+        <p class="card-rating">Global NCAP Rating: ★
